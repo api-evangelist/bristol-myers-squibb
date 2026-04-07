@@ -1,7 +1,12 @@
 aid: bristol-myers-squibb
-url: https://raw.githubusercontent.com/api-evangelist/bristol-myers-squibb/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/bristol-myers-squibb/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.bristol-myers-squibb.com
+description: >-
+  Bristol-Myers Squibb is a global biopharmaceutical company focused on the discovery,
+  development, and delivery of innovative medicines for patients with serious diseases
+  in oncology, immunology, cardiovascular, and fibrosis.
