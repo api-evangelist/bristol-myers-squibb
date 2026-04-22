@@ -1,33 +1,37 @@
-# Bristol-Myers Squibb (bristol-myers-squibb)
-Bristol-Myers Squibb is a Fortune 500 company. This repository captures the APIs, developer tools, and machine-readable API artifacts for Bristol-Myers Squibb.
+# Bristol Myers Squibb
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/bristol-myers-squibb/refs/heads/main/apis.yml)
+Bristol Myers Squibb (BMS) is a global Fortune 500 biopharmaceutical company committed to discovering, developing, and delivering innovative medicines for patients with serious diseases. BMS focuses on oncology, immunology, cardiovascular, fibrosis, and cell therapy including CAR T-cell treatments.
 
-## Scope
+## Therapeutic Areas
 
-- **Type:** Contract
-- **Position:** Consuming
-- **Access:** 3rd-Party
+- Oncology (blood cancers, solid tumors)
+- Immunology (psoriasis, rheumatoid arthritis)
+- Cardiovascular disease
+- Fibrosis (pulmonary fibrosis)
+- Cell therapy (CAR T)
 
-## Tags:
+## Digital Health Platforms
 
- - Fortune 500
+### BMS Study Connect
+Clinical trial recruitment platform enabling patients and caregivers to find and enroll in BMS-sponsored research studies at [bmsstudyconnect.com](https://www.bmsstudyconnect.com/).
 
-## Timestamps
+### Medical Information Portal
+US healthcare provider portal providing access to product medical information, clinical data, and scientific resources for BMS medicines.
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-03-21
+### Research Data Sharing
+BMS offers a data sharing request process enabling independent researchers to access post-study data for scientific research.
 
-## APIs
+## Research & Innovation
 
-No public APIs have been documented yet. Contributions welcome.
+- Protein degradation technologies
+- Advanced treatment modalities
+- Translational medicine initiatives
+- Technology partnerships through Business Development team
 
-## Common Properties
+## Links
 
-- [Website](https://www.bristol-myers-squibb.com)
-
-## Maintainers
-
-**FN:** API Evangelist
-
-**Email:** info@apievangelist.com
+- [Website](https://www.bms.com)
+- [Clinical Trials](https://www.bmsstudyconnect.com/)
+- [Business Development](https://www.bms.com/researchers-and-partners/business-development.html)
+- [Data Sharing](https://www.bms.com/researchers-and-partners/independent-research/data-sharing-request-process.html)
+- [Investor Relations](https://investors.bms.com)
