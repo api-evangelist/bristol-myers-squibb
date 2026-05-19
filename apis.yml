@@ -56,6 +56,10 @@ apis:
       enabling patients and caregivers to find and enroll in Bristol Myers Squibb
       sponsored clinical research studies.
 common:
+  - type: GitHubOrganization
+    url: https://github.com/BristolMyersSquibb
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/bristol-myers-squibb
   - type: Website
     url: https://www.bms.com
   - type: ResearchDataSharing
