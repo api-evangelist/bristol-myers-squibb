@@ -56,6 +56,8 @@ apis:
       enabling patients and caregivers to find and enroll in Bristol Myers Squibb
       sponsored clinical research studies.
 common:
+  - type: DomainSecurity
+    url: security/bristol-myers-squibb-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/BristolMyersSquibb
   - type: LinkedIn
