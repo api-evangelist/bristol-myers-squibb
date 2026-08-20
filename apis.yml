@@ -2,6 +2,15 @@ aid: bristol-myers-squibb
 url: https://raw.githubusercontent.com/api-evangelist/bristol-myers-squibb/refs/heads/main/apis.yml
 name: Bristol Myers Squibb
 tags:
+  - Pharmaceuticals
+  - Biopharmaceutical
+  - Oncology
+  - Immunology
+  - Cardiovascular
+  - Clinical Trials
+  - Digital Health
+  - Fortune 500
+tags_raw:
   - Pharmaceutical
   - Biopharmaceutical
   - Oncology
