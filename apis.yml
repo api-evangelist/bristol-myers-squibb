@@ -47,7 +47,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bristol-myers-squibb.png
 access: 3rd-Party
 created: '2026-03-21'
-modified: '2026-04-21'
+modified: '2026-09-04'
 position: Consuming
 description: >-
   Bristol Myers Squibb (BMS) is a global Fortune 500 biopharmaceutical company
@@ -65,28 +65,44 @@ apis:
       - Medical Information
       - Healthcare Providers
       - Clinical Data
-    humanURL: https://www.bms.com/healthcare-providers/medical-information.html
+    humanURL: https://www.bmsmedinfo.com/
     properties:
-      - url: https://www.bms.com/healthcare-providers/medical-information.html
+      - url: https://www.bmsmedinfo.com/
         type: Portal
+      - url: https://www.bmsmedinfo.com/prescribing-information.html
+        type: x-PrescribingInformation
+      - url: https://www.bmsmedinfo.com/submit-medical-inquiry.html
+        type: x-MedicalInquiry
     description: >-
-      The BMS Medical Information portal provides US healthcare providers with
-      access to product medical information, clinical data, and scientific resources
-      for BMS medicines across oncology, immunology, and cardiovascular therapeutic areas.
+      BMS Medical Information Online provides US healthcare providers with prescribing
+      information, medical inquiry submission, and product/regimen libraries for BMS
+      medicines across oncology, hematology, immunology, cardiovascular and neuroscience
+      (ABECMA, BREYANZI, CAMZYOS, COBENFY, ELIQUIS, OPDIVO, ORENCIA, REBLOZYL, REVLIMID,
+      SOTYKTU, YERVOY and others). It is an Adobe Experience Manager web application with
+      no published API: probed 2026-09-04, /openapi.json, /swagger.json, /graphql, /api and
+      every /.well-known/ path returned 404 or a redirect to the site 404 page. The
+      previously recorded humanURL, www.bms.com/healthcare-providers/medical-information.html,
+      now returns HTTP 404 and has been replaced with the live portal host.
   - aid: bristol-myers-squibb:study-connect
     name: BMS Study Connect
     tags:
       - Clinical Trials
       - Patient Recruitment
       - Research
-    humanURL: https://www.bmsstudyconnect.com/
+    humanURL: https://www.bmsclinicaltrials.com/us/en
     properties:
-      - url: https://www.bmsstudyconnect.com/
+      - url: https://www.bmsclinicaltrials.com/us/en
         type: Portal
+      - url: https://www.bms.com/research-and-development/clinical-trials.html
+        type: x-ClinicalTrials
     description: >-
-      BMS Study Connect is a clinical trial recruitment and information platform
-      enabling patients and caregivers to find and enroll in Bristol Myers Squibb
-      sponsored clinical research studies.
+      BMS Clinical Trials is the clinical trial search and enrollment platform for
+      patients and caregivers looking for Bristol Myers Squibb sponsored studies. It was
+      formerly published as BMS Study Connect; www.bmsstudyconnect.com now 301s to
+      www.bmsclinicaltrials.com/us/en. It is an Adobe Experience Manager web application
+      with no published API. Machine-readable data about BMS-sponsored trials is available,
+      but from NIH rather than from BMS: the ClinicalTrials.gov v2 API returned
+      totalCount 2931 for query.spons=Bristol-Myers Squibb on 2026-09-04.
 common:
   - type: DomainSecurity
     url: security/bristol-myers-squibb-domain-security.yml
@@ -96,13 +112,56 @@ common:
     url: https://www.linkedin.com/company/bristol-myers-squibb
   - type: Website
     url: https://www.bms.com
-  - type: ResearchDataSharing
-    url: https://www.bms.com/researchers-and-partners/independent-research/data-sharing-request-process.html
-  - type: BusinessDevelopment
-    url: https://www.bms.com/researchers-and-partners/business-development.html
+  - type: x-ResearchDataSharing
+    url: https://www.bms.com/research-and-development/independent-research/data-sharing-request-process.html
+  - type: x-BusinessDevelopment
+    url: https://www.bms.com/our-company/partnerships-and-business-development.html
   - type: InvestorRelations
     url: https://investors.bms.com
+  - type: Packages
+    url: packages/bristol-myers-squibb-packages.yml
+  - type: Conformance
+    url: conformance/bristol-myers-squibb-conformance.yml
+  - type: LLMsTxt
+    url: llms/bristol-myers-squibb-llms.txt
+  - type: Plans
+    url: plans/bristol-myers-squibb-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/bristol-myers-squibb-rate-limits.yml
+  - type: FinOps
+    url: finops/bristol-myers-squibb-finops.yml
+  - type: PrivacyPolicy
+    url: https://www.bms.com/privacy-policy.html
+  - type: TermsOfService
+    url: https://www.bms.com/legal-notice.html
+  - type: Blog
+    url: https://www.bms.com/life-and-science.html
+  - type: x-ClinicalTrials
+    url: https://www.bms.com/research-and-development/clinical-trials.html
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
 specificationVersion: '0.23'
+x-enrichment:
+  date: '2026-09-04'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: covered
+  reason: no-developer-program
+  detail: >-
+    Bristol Myers Squibb publishes no API and no developer program: api.bms.com resolves to a CA
+    SiteMinder SSO vanity host (smvu.web.bms.com) serving a 29-byte static page and 404s on
+    /openapi.json, /graphql, /mcp and every /.well-known/ path, and developer.bms.com does not
+    resolve at all. What it does publish is a real first-party open-source surface — 49 repositories
+    in github.com/BristolMyersSquibb, 8 of them released to CRAN — so this profile is covered by
+    package, conformance and probe artifacts rather than by a contract.
+  evidence:
+    - url: https://api.bms.com/openapi.json
+      status: 404
+    - url: https://www.bms.com/.well-known/api-catalog
+      status: 404
+    - url: https://cran.r-project.org/package=blockr.core
+      status: 200
+  checked: '2026-09-04'

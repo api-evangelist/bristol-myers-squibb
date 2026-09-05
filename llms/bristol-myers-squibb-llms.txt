@@ -1,0 +1,91 @@
+# Bristol Myers Squibb
+
+> Bristol Myers Squibb (BMS) is a global Fortune 500 biopharmaceutical company discovering,
+> developing and delivering medicines in oncology, hematology, immunology, cardiovascular and
+> neuroscience. BMS publishes **no public API, no developer portal and no machine-readable API
+> contract**. It does publish a substantial first-party open-source software surface — the
+> `blockr` R framework for clinical data work — and it meets the clinical-research disclosure
+> standards of its market.
+
+<!--
+generated: 2026-09-04
+method: generated
+source: assembled from all/bristol-myers-squibb/apis.yml and the artifacts in this repository,
+  after a full contract-discovery pass (STEP 0b) found no OpenAPI, AsyncAPI, GraphQL SDL, gRPC
+  .proto, WSDL, MCP server or A2A agent card on any host Bristol Myers Squibb operates.
+  Bristol Myers Squibb does not serve an llms.txt of its own: https://www.bms.com/llms.txt
+  returned HTTP 404 on 2026-09-04, as did the same path on bms.com, www.bmsmedinfo.com,
+  www.bmsclinicaltrials.com, investors.bms.com and blockr.site.
+-->
+
+## What is and is not here
+
+- There is **no BMS API**. Do not construct requests against `api.bms.com`: it resolves to a CA
+  SiteMinder SSO vanity host (`smvu.web.bms.com`) serving a 29-byte static page, and it 404s on
+  `/openapi.json`, `/graphql`, `/mcp` and every `/.well-known/` path.
+- There is **no MCP server** and **no A2A agent card** on any BMS host.
+- There is **no `/.well-known/` discovery document** of any kind on any BMS host.
+- Machine-readable data *about* BMS trials exists, but it is published by NIH, not by BMS:
+  `https://clinicaltrials.gov/api/v2/studies?query.spons=Bristol-Myers%20Squibb` returned
+  `totalCount: 2931` on 2026-09-04.
+
+## Company
+
+- [Bristol Myers Squibb](https://www.bms.com): corporate site.
+- [Research & development](https://www.bms.com/research-and-development.html): pipeline, clinical
+  trials, independent research.
+- [Partnerships and business development](https://www.bms.com/our-company/partnerships-and-business-development.html):
+  the partnering front door — a contact process, not an API program.
+- [Investor relations](https://investors.bms.com): behind a Cloudflare bot challenge for
+  non-browser clients (HTTP 403 to a plain crawler).
+
+## Human-facing product surfaces (no API behind them)
+
+- [Medical Information Online](https://www.bmsmedinfo.com/): US healthcare-provider portal for
+  prescribing information, medical inquiries and product libraries across ABECMA, BREYANZI,
+  CAMZYOS, COBENFY, ELIQUIS, OPDIVO, ORENCIA, REBLOZYL, REVLIMID, SOTYKTU, YERVOY and others.
+  Adobe Experience Manager; 11 URLs in its sitemap; no JSON contract.
+- [BMS Clinical Trials](https://www.bmsclinicaltrials.com/us/en): trial search and enrollment,
+  formerly published as BMS Study Connect at bmsstudyconnect.com, which now 301s here.
+
+## Clinical trial data access
+
+- [Clinical trials data sharing request process](https://www.bms.com/research-and-development/independent-research/data-sharing-request-process.html)
+- [Disclosure commitment](https://www.bms.com/research-and-development/clinical-trials/disclosure-commitment.html):
+  names ClinicalTrials.gov, the EU Clinical Trials Register, the EU Clinical Trial Regulation and
+  the PhRMA/EFPIA Principles for Responsible Clinical Trial Data Sharing.
+- [Vivli member page](https://vivli.org/ourmember/bristol-myers-squibb/): independent-researcher
+  data requests are brokered by Vivli, a third-party platform — the request surface does not live
+  on a BMS host.
+
+## Open source published by Bristol Myers Squibb
+
+The `blockr` project — a block-based, no-code Shiny framework for data manipulation and
+visualization, built for clinical trial data work on CDISC ADaM and SDTM datasets.
+
+- [github.com/BristolMyersSquibb](https://github.com/BristolMyersSquibb): 49 public repositories.
+- [blockr.site](https://blockr.site/): VitePress documentation, deployed from the org's own
+  `blockr` repository.
+- On CRAN: `blockr` 0.1.0, `blockr.core` 0.1.3, `blockr.dock` 0.1.2, `blockr.dag` 0.1.5,
+  `blockr.dplyr` 0.1.0, `blockr.ggplot` 0.1.0, `blockr.io` 0.1.0, `blockr.session` 0.1.0.
+- Development builds: [bristolmyerssquibb.r-universe.dev](https://bristolmyerssquibb.r-universe.dev).
+- `blockr.pharma` renders CDISC ADaM patient profiles; `blockr.admiral` wraps all 62 pharmaverse
+  `admiral` derive_* functions for SDTM-to-ADaM derivation.
+- These are development tools, **not** client SDKs for a BMS API. There is no BMS API to wrap.
+
+## Artifacts in this profile
+
+- packages/bristol-myers-squibb-packages.yml — the CRAN / r-universe / GitHub package inventory.
+- conformance/bristol-myers-squibb-conformance.yml — what BMS does and does not conform to.
+- well-known/bristol-myers-squibb-well-known.yml — every `/.well-known/` path probed, and its status.
+- mcp/bristol-myers-squibb-mcp.yml — the recorded absence of an MCP server.
+- plans/bristol-myers-squibb-plans-pricing.yml — plan_count 0.
+- rate-limits/bristol-myers-squibb-rate-limits.yml — limit_count 0.
+- security/bristol-myers-squibb-domain-security.yml — TLS, HSTS, DNSSEC, CAA, SPF, DMARC probes.
+
+## Corrections
+
+This is an independent third-party profile maintained by API Evangelist, not by Bristol Myers
+Squibb. If BMS publishes an API, an OpenAPI, or an MCP server, open an issue on
+https://github.com/api-evangelist/bristol-myers-squibb or email info@apievangelist.com and it
+will be re-profiled and re-scored at no cost.

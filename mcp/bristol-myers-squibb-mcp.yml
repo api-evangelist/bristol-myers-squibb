@@ -1,0 +1,42 @@
+specification: API Commons MCP
+specificationVersion: '0.1'
+provider: Bristol Myers Squibb
+providerId: bristol-myers-squibb
+generated: '2026-09-04'
+method: probed
+status: none
+source: Anonymous POST of {"jsonrpc":"2.0","id":1,"method":"tools/list"} and GET of /mcp on api.bms.com,
+  www.bms.com, www.bmsmedinfo.com and www.bmsclinicaltrials.com; plus a search of github.com/BristolMyersSquibb
+  (49 public repos) and the blockr documentation site.
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+summary: Bristol Myers Squibb ships no MCP server, hosted or local. /mcp 404s on every BMS host. The closest
+  thing in the company's public code is blockr.assistant, a Shiny dock extension that exposes in-process
+  LLM tools (list_blocks, describe_block, query_data, add_block, modify_block) through the R `ellmer`
+  package — it is an in-app tool surface for a desktop/Shiny session, not an MCP server, and it is deliberately
+  NOT recorded as one here.
+tools: []
+note: No candidate tool list was derived, because there is no OpenAPI to derive one from. Emitting a fabricated
+  endpoint or an invented tool list would read as a verified agent surface; recording the absence is the
+  honest result. No MCPServer pointer is wired into apis.yml.
+probes:
+- url: https://api.bms.com/mcp
+  method: POST tools/list
+  status: 404
+- url: https://www.bms.com/mcp
+  method: POST tools/list
+  status: 302
+  note: redirect to the AEM 404 page
+- url: https://www.bmsmedinfo.com/mcp
+  method: POST tools/list
+  status: 302
+  note: redirect to the AEM 404 page
+- url: https://www.bmsclinicaltrials.com/mcp
+  method: POST tools/list
+  status: 301
+  note: redirect to the AEM 404 page
+maintainers:
+- FN: Kin Lane
+  email: info@apievangelist.com

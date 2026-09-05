@@ -1,0 +1,259 @@
+specification: API Commons Packages
+specificationVersion: '0.1'
+provider: Bristol Myers Squibb
+providerId: bristol-myers-squibb
+generated: '2026-09-04'
+method: searched
+source: CRAN metadata (crandb.r-pkg.org), the BMS r-universe registry (bristolmyerssquibb.r-universe.dev/api/packages)
+  and DESCRIPTION files in github.com/BristolMyersSquibb
+summary: 'Bristol Myers Squibb publishes NO API client SDKs, because it publishes no API. It does publish a substantial
+  first-party open-source software surface: the ''blockr'' R framework — a block-based, no-code UI for data manipulation
+  and visualization aimed at clinical-trial data work — across 49 public repositories in github.com/BristolMyersSquibb,
+  of which 8 are released on CRAN and 8 are served from the company''s own r-universe registry. These are development
+  tools, NOT client libraries for a Bristol Myers Squibb API, so no `SDKs` pointer is emitted for them; recording
+  them as SDKs would credit the company with an API surface it does not have.'
+registries_checked:
+- cran
+- r-universe
+- npm
+- pypi
+- rubygems
+- crates.io
+- packagist
+- maven-central
+- nuget
+- pkg.go.dev
+registries_note: npm, PyPI, RubyGems, crates.io, Packagist, Maven Central, NuGet and pkg.go.dev were checked for
+  a first-party Bristol Myers Squibb client library and returned nothing first-party. blockr.admiral and blockr-site
+  carry JavaScript build tooling only and publish no package.
+package_count: 19
+sdk_count: 0
+packages:
+- name: blockr
+  registry: cran
+  url: https://cran.r-project.org/package=blockr
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.1.0
+  published: '2026-01-12'
+  repository: https://github.com/BristolMyersSquibb/blockr
+  title: A Block-Based Framework for Data Manipulation and Visualization
+  dev_version: 0.1.1
+  dev_published: '2026-09-03'
+  dev_registry: https://bristolmyerssquibb.r-universe.dev
+- name: blockr.core
+  registry: cran
+  url: https://cran.r-project.org/package=blockr.core
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.1.3
+  published: '2026-07-12'
+  repository: https://github.com/BristolMyersSquibb/blockr.core
+  title: Graphical Web-Framework for Data Manipulation and Visualization
+  dev_version: 0.1.4
+  dev_published: '2026-08-31'
+  dev_registry: https://bristolmyerssquibb.r-universe.dev
+- name: blockr.dock
+  registry: cran
+  url: https://cran.r-project.org/package=blockr.dock
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.1.2
+  published: '2026-07-13'
+  repository: https://github.com/BristolMyersSquibb/blockr.dock
+  title: A Docking Layout Manager for 'blockr'
+  dev_version: 0.1.3
+  dev_published: '2026-09-01'
+  dev_registry: https://bristolmyerssquibb.r-universe.dev
+- name: blockr.dplyr
+  registry: cran
+  url: https://cran.r-project.org/package=blockr.dplyr
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.1.0
+  published: '2025-12-18'
+  repository: https://github.com/BristolMyersSquibb/blockr.dplyr
+  title: Interactive 'dplyr' Data Transformation Blocks
+  dev_version: 0.2.0.9007
+  dev_published: '2026-09-03'
+  dev_registry: https://bristolmyerssquibb.r-universe.dev
+- name: blockr.ggplot
+  registry: cran
+  url: https://cran.r-project.org/package=blockr.ggplot
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.1.0
+  published: '2025-12-18'
+  repository: https://github.com/BristolMyersSquibb/blockr.ggplot
+  title: Interactive 'ggplot2' Visualization Blocks
+  dev_version: 0.1.1.9003
+  dev_published: '2026-09-03'
+  dev_registry: https://bristolmyerssquibb.r-universe.dev
+- name: blockr.io
+  registry: cran
+  url: https://cran.r-project.org/package=blockr.io
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.1.0
+  published: '2026-01-07'
+  repository: https://github.com/BristolMyersSquibb/blockr.io
+  title: Interactive File Import and Export Blocks
+  dev_version: 0.1.0.9015
+  dev_published: '2026-08-23'
+  dev_registry: https://bristolmyerssquibb.r-universe.dev
+- name: blockr.dag
+  registry: cran
+  url: https://cran.r-project.org/package=blockr.dag
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.1.5
+  published: '2026-07-30'
+  repository: https://github.com/BristolMyersSquibb/blockr.dag
+  title: A Directed Acyclic Graph Extension for 'blockr'
+  dev_version: 0.1.5
+  dev_published: '2026-08-29'
+  dev_registry: https://bristolmyerssquibb.r-universe.dev
+- name: blockr.session
+  registry: cran
+  url: https://cran.r-project.org/package=blockr.session
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.1.0
+  published: '2026-08-04'
+  repository: https://github.com/BristolMyersSquibb/blockr.session
+  title: Session Management for 'blockr'
+  dev_version: 0.1.1
+  dev_published: '2026-08-25'
+  dev_registry: https://bristolmyerssquibb.r-universe.dev
+- name: blockr.ui
+  registry: github
+  url: https://github.com/BristolMyersSquibb/blockr.ui
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.0.1
+  published: null
+  title: User Interface Components for the 'blockr' Ecosystem
+  note: Not published to CRAN or r-universe; version read from the DESCRIPTION file on the default branch. No registry
+    metadata endpoint answers for this package, so no publication date can be recorded.
+- name: blockr.ai
+  registry: github
+  url: https://github.com/BristolMyersSquibb/blockr.ai
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.0.14
+  published: null
+  title: AI-Powered Blocks for 'blockr.core'
+  note: Not published to CRAN or r-universe; version read from the DESCRIPTION file on the default branch. No registry
+    metadata endpoint answers for this package, so no publication date can be recorded.
+- name: blockr.viz
+  registry: github
+  url: https://github.com/BristolMyersSquibb/blockr.viz
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.2.85
+  published: null
+  title: Visualization and Render Blocks for Blockr
+  note: Not published to CRAN or r-universe; version read from the DESCRIPTION file on the default branch. No registry
+    metadata endpoint answers for this package, so no publication date can be recorded.
+- name: blockr.pharma
+  registry: github
+  url: https://github.com/BristolMyersSquibb/blockr.pharma
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.0.0.9023
+  published: null
+  title: Pharma Blocks for Blockr
+  note: Not published to CRAN or r-universe; version read from the DESCRIPTION file on the default branch. No registry
+    metadata endpoint answers for this package, so no publication date can be recorded.
+- name: blockr.assistant
+  registry: github
+  url: https://github.com/BristolMyersSquibb/blockr.assistant
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.1.0.9000
+  published: null
+  title: An LLM Assistant Extension for 'blockr'
+  note: Not published to CRAN or r-universe; version read from the DESCRIPTION file on the default branch. No registry
+    metadata endpoint answers for this package, so no publication date can be recorded.
+- name: blockr.code
+  registry: github
+  url: https://github.com/BristolMyersSquibb/blockr.code
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.0.1
+  published: null
+  title: Idiomatic code export for 'blockr'
+  note: Not published to CRAN or r-universe; version read from the DESCRIPTION file on the default branch. No registry
+    metadata endpoint answers for this package, so no publication date can be recorded.
+- name: blockr.dm
+  registry: github
+  url: https://github.com/BristolMyersSquibb/blockr.dm
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.0.42
+  published: null
+  title: Relational Data Management Blocks for 'blockr'
+  note: Not published to CRAN or r-universe; version read from the DESCRIPTION file on the default branch. No registry
+    metadata endpoint answers for this package, so no publication date can be recorded.
+- name: blockr.audit
+  registry: github
+  url: https://github.com/BristolMyersSquibb/blockr.audit
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.0.0.9000
+  published: null
+  title: An Audit Trail Extension for 'blockr'
+  note: Not published to CRAN or r-universe; version read from the DESCRIPTION file on the default branch. No registry
+    metadata endpoint answers for this package, so no publication date can be recorded.
+- name: blockr.otel
+  registry: github
+  url: https://github.com/BristolMyersSquibb/blockr.otel
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.1.0
+  published: null
+  title: OpenTelemetry Profiling Tools for Blockr
+  note: Not published to CRAN or r-universe; version read from the DESCRIPTION file on the default branch. No registry
+    metadata endpoint answers for this package, so no publication date can be recorded.
+- name: blockr.admiral
+  registry: github
+  url: https://github.com/BristolMyersSquibb/blockr.admiral
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.0.1
+  published: null
+  title: Admiral ADaM Derivation Blocks for blockr
+  note: Not published to CRAN or r-universe; version read from the DESCRIPTION file on the default branch. No registry
+    metadata endpoint answers for this package, so no publication date can be recorded.
+- name: artful
+  registry: github
+  url: https://github.com/BristolMyersSquibb/artful
+  language: R
+  official: true
+  kind: open-source-framework
+  version: 0.0.0.9000
+  published: null
+  title: What the Package Does (One Line, Title Case)
+  note: Not published to CRAN or r-universe; version read from the DESCRIPTION file on the default branch. No registry
+    metadata endpoint answers for this package, so no publication date can be recorded.
+maintainers:
+- FN: Kin Lane
+  email: info@apievangelist.com

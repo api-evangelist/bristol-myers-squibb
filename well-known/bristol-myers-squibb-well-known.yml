@@ -1,0 +1,100 @@
+specification: API Commons Well-Known
+specificationVersion: '0.1'
+provider: Bristol Myers Squibb
+providerId: bristol-myers-squibb
+generated: '2026-09-04'
+method: probed
+source: anonymous HTTPS GET of /.well-known/* on every host named in apis.yml plus the BMS Medical Information,
+  BMS Clinical Trials, api.bms.com SSO vanity host, investor relations, and blockr documentation hosts
+summary: No host Bristol Myers Squibb operates serves any /.well-known/ discovery document. api.bms.com resolves
+  to a CA SiteMinder SSO vanity host (smvu.web.bms.com) and answers 404 on every discovery path. investors.bms.com
+  answers HTTP 200 with the 11-byte string 'Invalid key' for EVERY /.well-known/* path — a catch-all, not a document
+  — so every one is recorded as a miss. No WellKnown and no SecurityTxt pointer is emitted, because nothing was
+  served.
+hosts:
+- host: www.bms.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: bms.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+- host: www.bmsmedinfo.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: www.bmsclinicaltrials.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 301
+- host: api.bms.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+- host: investors.bms.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    note: HTTP 200 returned an HTML/catch-all body, not a document — recorded as a miss
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    note: HTTP 200 returned an HTML/catch-all body, not a document — recorded as a miss
+- host: blockr.site
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

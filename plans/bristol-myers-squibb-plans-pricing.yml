@@ -4,61 +4,34 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Bristol Myers Squibb
 providerId: bristol-myers-squibb
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
+modified: '2026-09-04'
+generated: '2026-09-04'
+method: searched
 reconciled: false
 tags:
   - Pharmaceutical
   - Biopharmaceutical
-  - Oncology
-  - Immunology
-  - Cardiovascular
   - Clinical Trials
   - Digital Health
-description: Bristol Myers Squibb is a Fortune 500 biopharmaceutical company. It does not operate a public,
-  commercial developer platform with a published price list. The Medical Information portal, BMS Study
-  Connect (clinical trial recruitment), and Business Development platform exist for healthcare providers,
-  patients, and research partners and are accessed under collaboration / partnership agreements rather
-  than as priced API products. Independent researchers may apply to the BMS data sharing request process.
+description: >-
+  Bristol Myers Squibb publishes no API plans, no developer tiers and no price list, because it
+  publishes no API. Its public programmatic-adjacent surfaces — the Medical Information Online
+  portal (www.bmsmedinfo.com), BMS Clinical Trials (www.bmsclinicaltrials.com, formerly BMS Study
+  Connect) and the partnerships / business development front door — are human web applications and
+  contact forms, not priced products. Independent-researcher access to clinical trial data is not
+  sold at all: it is applied for through the Vivli platform under the PhRMA/EFPIA data-sharing
+  principles.
 sources:
-  - https://www.bms.com/researchers-and-partners.html
-  - https://www.bmsstudyconnect.com/
-notes: BMS does not publish API pricing; access to medical information, study, and business-development
-  surfaces is contractual / partnership-based. Reconcile against the relevant collaboration agreement.
-plans:
-  - id: bristol-myers-squibb-research-collaboration
-    name: Research / Partnership Collaboration
-    type: enterprise
-    description: Access to BMS medical information, clinical trial, and business-development data surfaces
-      under a research collaboration, partnership, or data-sharing agreement.
-    entries:
-      - label: Collaboration agreement
-        name: collaboration_agreement
-        type: subscription
-        metric: agreement
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: see partnership agreement
-        userMultiplied: false
-      - label: Data sharing request
-        name: data_sharing_request
-        type: quota
-        metric: request
-        limit: -1
-        timeFrame: usage
-        geo: global
-        unit: 1
-        price: governed by request process
-        userMultiplied: false
-    elements:
-      - name: Medical Information Portal
-      - name: BMS Study Connect
-      - name: BMS Business Development
-      - name: Independent Researcher Data Sharing
+  - https://www.bms.com/our-company/partnerships-and-business-development.html
+  - https://www.bms.com/research-and-development/independent-research/data-sharing-request-process.html
+  - https://www.bmsmedinfo.com/
+  - https://www.bmsclinicaltrials.com/us/en
+plan_count: 0
+plans: []
+notes: >-
+  This artifact previously carried a synthetic "Research / Partnership Collaboration" plan written
+  by the 2026-05-04 bulk sweep. Bristol Myers Squibb never published that plan; it has been removed
+  and replaced with an honest plan_count of 0 and the pages that were actually read on 2026-09-04.
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com

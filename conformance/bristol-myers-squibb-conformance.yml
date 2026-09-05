@@ -1,0 +1,145 @@
+specification: API Commons Conformance
+specificationVersion: '0.1'
+provider: Bristol Myers Squibb
+providerId: bristol-myers-squibb
+generated: '2026-09-04'
+method: searched
+source: >-
+  Bristol Myers Squibb's own clinical trial disclosure commitment page, its independent-research
+  data sharing request process, and the CDISC-shaped open-source R packages it publishes at
+  github.com/BristolMyersSquibb. No OpenAPI, AsyncAPI, GraphQL SDL or other machine-readable API
+  contract exists for this company, so every API-technical conformance below is recorded as false
+  on the evidence of an exhaustive STEP 0b discovery pass, not assumed.
+summary: >-
+  Bristol Myers Squibb conforms to the clinical-research disclosure and data-sharing standards of
+  its own market — trial registration in ClinicalTrials.gov and the EU Clinical Trials Register,
+  the PhRMA/EFPIA Principles for Responsible Clinical Trial Data Sharing, and independent-researcher
+  data requests brokered through Vivli — and it publishes CDISC ADaM/SDTM-shaped open-source tooling.
+  It conforms to no API-technical standard, because it publishes no API.
+
+entries:
+  # ---- domain standards (0.12.0 domain_standard_conformance signature) ----
+  - id: clinicaltrials-gov-registration
+    name: ClinicalTrials.gov trial registration (FDAAA 801 / NIH registry)
+    category: domain-standard
+    conforms: true
+    evidence: https://www.bms.com/research-and-development/clinical-trials/disclosure-commitment.html
+    note: >-
+      BMS's own disclosure commitment page names ClinicalTrials.gov as the registry it posts to.
+      Independently corroborated against the NIH ClinicalTrials.gov API v2, which returns
+      totalCount 2931 for query.spons=Bristol-Myers Squibb (HTTP 200, 2026-09-04). The API is
+      operated by NIH, NOT by BMS — it is registered here as evidence of conformance only, and
+      is deliberately not listed as a Bristol Myers Squibb API.
+
+  - id: eu-ctr-disclosure
+    name: European Clinical Trial Regulation (EU CTR) / EU Clinical Trials Register
+    category: domain-standard
+    conforms: true
+    evidence: https://www.bms.com/research-and-development/clinical-trials/disclosure-commitment.html
+    note: >-
+      The same BMS page names the EU Clinical Trials Register and the European Clinical Trial
+      Regulation as disclosure obligations it meets. https://www.clinicaltrialsregister.eu/ctr-search/search
+      returned HTTP 200 on 2026-09-04.
+
+  - id: phrma-efpia-data-sharing-principles
+    name: PhRMA / EFPIA Principles for Responsible Clinical Trial Data Sharing
+    category: domain-standard
+    conforms: true
+    evidence: https://www.bms.com/research-and-development/independent-research/data-sharing-request-process.html
+    note: >-
+      BMS states alignment with the joint PhRMA and EFPIA Principles and publishes a request
+      process for independent researchers under them. Page returned HTTP 200 on 2026-09-04.
+
+  - id: vivli-data-request-platform
+    name: Vivli clinical trial data-sharing platform membership
+    category: domain-standard
+    conforms: true
+    evidence: https://vivli.org/ourmember/bristol-myers-squibb/
+    note: >-
+      BMS's disclosure page routes independent-researcher data requests to Vivli, and Vivli
+      publishes a BMS member page (HTTP 200, 2026-09-04). The request surface therefore lives
+      inside a third-party platform, not on a BMS host — this is the marketplace-only shape and
+      is the reason the machine-readable research-data surface is not reachable at bms.com.
+
+  - id: cdisc-adam
+    name: CDISC ADaM (Analysis Data Model)
+    category: domain-standard
+    conforms: true
+    evidence: https://github.com/BristolMyersSquibb/blockr.pharma
+    note: >-
+      BMS's own blockr.pharma README states the package "provides a no-code patient profile for
+      clinical safety review on CDISC ADaM data" and "expects the dm to be scoped ... tables follow
+      the ADaM standard (adsl, adae, advs, adlb)". This is BMS-published open-source tooling, NOT
+      an API contract — it evidences that BMS works in the CDISC data model, and does not earn
+      contract-level domain_standard_conformance, which reads a contract.
+
+  - id: cdisc-sdtm
+    name: CDISC SDTM (Study Data Tabulation Model)
+    category: domain-standard
+    conforms: true
+    evidence: https://github.com/BristolMyersSquibb/blockr.admiral
+    note: >-
+      blockr.admiral, published by BMS, wraps all 62 pharmaverse `admiral` derive_* functions and
+      documents an "SDTM → ADSL" example. Same caveat as cdisc-adam: open-source tooling, not a
+      published contract.
+
+  # ---- API-technical standards: none, on the evidence of a full STEP 0b discovery pass ----
+  - id: openapi
+    name: OpenAPI
+    category: contract
+    conforms: false
+    evidence: https://www.bms.com/openapi.json
+    note: >-
+      404. /openapi.json, /openapi.yaml, /swagger.json, /v1/openapi.json, /api-docs, /docs and
+      /redoc were probed on www.bms.com, bms.com, api.bms.com, www.bmsmedinfo.com,
+      www.bmsclinicaltrials.com and blockr.site. Every one 404d or 301d.
+  - id: graphql
+    name: GraphQL
+    category: contract
+    conforms: false
+    evidence: https://api.bms.com/graphql
+    note: 404. No /graphql surface answers on any BMS host.
+  - id: asyncapi
+    name: AsyncAPI
+    category: contract
+    conforms: false
+    evidence: https://www.bms.com/asyncapi.yaml
+    note: No event, streaming or webhook surface is published anywhere on a BMS host.
+  - id: oauth2
+    name: OAuth 2.0
+    category: security
+    conforms: false
+    evidence: https://api.bms.com/.well-known/oauth-authorization-server
+    note: >-
+      404. api.bms.com resolves to a CA SiteMinder SSO vanity host (smvu.web.bms.com) that serves
+      a 29-byte static page and publishes no authorization-server metadata.
+  - id: oidc
+    name: OpenID Connect Discovery
+    category: security
+    conforms: false
+    evidence: https://www.bms.com/.well-known/openid-configuration
+    note: 403 from the edge on bms.com; 404 on every other BMS host.
+  - id: rfc9457
+    name: RFC 9457 Problem Details
+    category: errors
+    conforms: false
+    evidence: https://www.bms.com/openapi.json
+    note: No contract exists to declare an error format.
+  - id: fhir
+    name: HL7 FHIR
+    category: domain-standard
+    conforms: false
+    evidence: https://www.bms.com/sitemap.locale.xml
+    note: >-
+      No FHIR surface. BMS is a manufacturer, not a care-delivery or payer organisation; its
+      523-URL sitemap names no FHIR endpoint, capability statement or implementation guide.
+  - id: rfc9116-security-txt
+    name: RFC 9116 security.txt
+    category: security
+    conforms: false
+    evidence: https://www.bms.com/.well-known/security.txt
+    note: 404 on every BMS host. See well-known/bristol-myers-squibb-well-known.yml.
+
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com

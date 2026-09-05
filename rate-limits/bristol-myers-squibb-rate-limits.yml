@@ -4,10 +4,9 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Bristol Myers Squibb
 providerId: bristol-myers-squibb
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
+modified: '2026-09-04'
+generated: '2026-09-04'
+method: searched
 reconciled: false
 tags:
   - Pharmaceutical
@@ -15,31 +14,24 @@ tags:
   - Clinical Trials
   - Digital Health
   - Rate Limiting
-description: Bristol Myers Squibb does not publish API rate limits. Programmatic access to medical information,
-  clinical trial, and business-development surfaces is contractual; rate-limit terms are conveyed in the
-  collaboration agreement and supporting onboarding documents.
+description: >-
+  Bristol Myers Squibb documents no API rate limits anywhere on its public surface, and publishes
+  no API against which limits could apply. No RateLimit-*, X-RateLimit-* or Retry-After header was
+  observed on any response from www.bms.com, api.bms.com, www.bmsmedinfo.com or
+  www.bmsclinicaltrials.com.
 sources:
-  - https://www.bms.com/researchers-and-partners.html
-notes: No public API rate-limit documentation. Limits are partner / collaboration specific.
-responseCodes:
-  throttled: 429
-  serviceUnavailable: 503
-limits:
-  - name: Partner / collaboration APIs
-    scope: contract
-    metric: varies
-    limit: 'see collaboration agreement'
-    notes: Per-partner values bound to the data sharing or research collaboration agreement.
-policies:
-  - name: Backoff Strategy
-    description: Apply exponential backoff with jitter on 429 / 503 responses; honor Retry-After when
-      present.
-  - name: Contract-Bound Capacity
-    description: Effective request capacity is set by the collaboration agreement, not via a public tier
-      page.
-  - name: Fair Use
-    description: Sustained traffic that materially impacts shared infrastructure may trigger throttling
-      regardless of contract.
+  - https://www.bms.com/robots.txt
+  - https://www.bmsclinicaltrials.com/robots.txt
+limit_count: 0
+limits: []
+headers: []
+notes: >-
+  The only published request-rate signal Bristol Myers Squibb serves is a crawl policy, not an API
+  limit: investors.bms.com/robots.txt declares `Crawl-delay: 10` for all agents and `Crawl-delay: 60`
+  for Eluta.ca. www.bms.com/robots.txt and www.bmsclinicaltrials.com/robots.txt declare Disallow
+  rules but no crawl delay. This artifact previously carried a synthetic "Partner / collaboration
+  APIs" limit and a backoff policy written by the 2026-05-04 bulk sweep; BMS never published either,
+  so both have been removed in favour of an honest limit_count of 0.
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
