@@ -1,7 +1,9 @@
 ---
 title: Evinova, Bristol Myers Squibb Partner to Apply AI to Global ...
 url: https://www.appliedclinicaltrialsonline.com/view/evinova-bristol-myers-squibb-partner-ai-global-clinical-development
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Bristol-Myers Squibb" press release artificial intelligence'
 position: 5
 source: serpapi-google

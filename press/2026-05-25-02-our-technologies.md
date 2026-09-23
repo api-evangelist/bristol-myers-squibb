@@ -1,7 +1,9 @@
 ---
 title: Our technologies
 url: https://www.bms.com/about-us/our-company/our-technologies.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Bristol-Myers Squibb" press release artificial intelligence'
 position: 2
 source: serpapi-google

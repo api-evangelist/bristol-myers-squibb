@@ -1,7 +1,9 @@
 ---
 title: 'Science Firsthand: Predicting new possibilities in drug ...'
 url: https://www.bms.com/life-and-science/science/predictive-molecule-invention.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Bristol-Myers Squibb" press release artificial intelligence'
 position: 4
 source: serpapi-google
