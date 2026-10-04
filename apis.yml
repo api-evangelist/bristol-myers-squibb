@@ -60,6 +60,7 @@ description: >-
   advanced treatment modalities, and digital health.
 apis:
   - aid: bristol-myers-squibb:medical-information-api
+    x-published: false
     name: BMS Medical Information Portal
     tags:
       - Medical Information
@@ -84,6 +85,7 @@ apis:
       previously recorded humanURL, www.bms.com/healthcare-providers/medical-information.html,
       now returns HTTP 404 and has been replaced with the live portal host.
   - aid: bristol-myers-squibb:study-connect
+    x-published: false
     name: BMS Study Connect
     tags:
       - Clinical Trials
