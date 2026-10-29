@@ -64,38 +64,106 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Bristol Myers Squibb (BMS) is a global Fortune 500 biopharmaceutical company committed to discovering, developing, and delivering innovative medicines for patients with serious diseases. BMS focuses on oncology, immunology, cardiovascular, fibrosis, and cell therapy including CAR T-cell treatments.
+Bristol Myers Squibb (BMS) is a global Fortune 500 biopharmaceutical company committed to discovering, developing, and delivering innovative medicines for patients with serious diseases. BMS focuses on oncology, immunology, cardiovascular, fibrosis, and cell therapy (CAR T). The company operates BMS Study Connect for clinical trial recruitment, a Medical Information portal for healthcare providers, and the BMS Business Development platform for research partnerships and data sharing. BMS actively pursues technology partnerships in protein degradation, advanced treatment modalities, and digital health.
 
-## Therapeutic Areas
+**Areas:** Pharmaceuticals · Biopharmaceutical · Oncology · Immunology · Cardiovascular · Clinical Trials · Digital Health · Fortune 500
 
-- Oncology (blood cancers, solid tumors)
-- Immunology (psoriasis, rheumatoid arthritis)
-- Cardiovascular disease
-- Fibrosis (pulmonary fibrosis)
-- Cell therapy (CAR T)
+## Bristol Myers Squibb on APIs.io
 
-## Digital Health Platforms
+Everything profiled for Bristol Myers Squibb is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bristol-myers-squibb/](https://apis.io/providers/bristol-myers-squibb/)** — or go straight to one of the APIs or properties below.
 
-### BMS Study Connect
-Clinical trial recruitment platform enabling patients and caregivers to find and enroll in BMS-sponsored research studies at [bmsstudyconnect.com](https://www.bmsstudyconnect.com/).
+### APIs (2)
 
-### Medical Information Portal
-US healthcare provider portal providing access to product medical information, clinical data, and scientific resources for BMS medicines.
+- [BMS Medical Information Portal](https://apis.io/apis/bristol-myers-squibb/medical-information-api/) — BMS Medical Information Online provides US healthcare providers with prescribing information, medical inquiry submission, and product/regimen libraries for…
+- [BMS Study Connect](https://apis.io/apis/bristol-myers-squibb/study-connect/) — BMS Clinical Trials is the clinical trial search and enrollment platform for patients and caregivers looking for Bristol Myers Squibb sponsored studies. It…
 
-### Research Data Sharing
-BMS offers a data sharing request process enabling independent researchers to access post-study data for scientific research.
+### Published properties
 
-## Research & Innovation
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- Protein degradation technologies
-- Advanced treatment modalities
-- Translational medicine initiatives
-- Technology partnerships through Business Development team
+#### Security (1)
 
-## Links
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Bristol Myers Squibb Domain Security](https://apis.io/security/bristol-myers-squibb/bristol-myers-squibb-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Bristol Myers Squibb Plans Pricing](https://apis.io/plans/bristol-myers-squibb/bristol-myers-squibb-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Bristol Myers Squibb Rate Limits](https://apis.io/rate-limits/bristol-myers-squibb/bristol-myers-squibb-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Bristol Myers Squibb Finops](https://apis.io/finops/bristol-myers-squibb/bristol-myers-squibb-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.bms.com)
-- [Clinical Trials](https://www.bmsstudyconnect.com/)
-- [Business Development](https://www.bms.com/researchers-and-partners/business-development.html)
-- [Data Sharing](https://www.bms.com/researchers-and-partners/independent-research/data-sharing-request-process.html)
-- [Investor Relations](https://investors.bms.com)
+- [Blog](https://www.bms.com/life-and-science.html)
+- [Terms of service](https://www.bms.com/legal-notice.html)
+- [Privacy policy](https://www.bms.com/privacy-policy.html)
+- [GitHub](https://github.com/BristolMyersSquibb)
+
+## API Evangelist rating
+
+**Kin Score 13.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 14.8** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/bristol-myers-squibb/](https://apis.io/providers/bristol-myers-squibb/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Bristol Myers Squibb: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bristol-myers-squibb/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
